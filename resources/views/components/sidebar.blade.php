@@ -20,10 +20,21 @@
         </ul>
       </li>
       <li class="menu-header">Settings</li>
-      <li class="{{ Request::is('user') ? 'active' : '' }}">
-        <a class="nav-link" href="{{ url('user') }}"><i class="fas fa-user">
-          </i> <span>User</span>
+      {{-- <li class="{{ Request::is('user') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ url('user') }}"><i class="fas fa-users">
+          </i> <span>Manajemen User</span>
         </a>
+      </li> --}}
+      <li class="nav-item dropdown {{ request()->is('user*') ? 'active' : '' }}">
+        <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i><span>Manajemen User</span></a>
+        <ul class="dropdown-menu">
+          <li class="{{ Request::is('user/create') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ url('user/create') }}">Tambah User</a>
+          </li>
+          <li class='{{ Request::is('user') ? 'active' : '' }}'>
+            <a class="nav-link" href="{{ url('user') }}">Daftar User</a>
+          </li>
+        </ul>
       </li>
       {{-- <li class="nav-item dropdown {{ $type_menu === 'forms' ? 'active' : '' }}">
         <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
