@@ -7,12 +7,6 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    // protected $title = 'User';
-
-    // public function __construct($title)
-    // {
-    //     $this->title = $title;
-    // }
     /**
      * Display a listing of the resource.
      *
@@ -21,7 +15,6 @@ class UserController extends Controller
     public function index()
     {
         return view('pages.user.user-data', [
-            // 'title' => $title,
             'title' => 'User Management',
             // 'users' => User::all()
         ]);

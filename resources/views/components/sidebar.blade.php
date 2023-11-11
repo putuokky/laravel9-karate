@@ -20,11 +20,6 @@
         </ul>
       </li>
       <li class="menu-header">Settings</li>
-      {{-- <li class="{{ Request::is('user') ? 'active' : '' }}">
-        <a class="nav-link" href="{{ url('user') }}"><i class="fas fa-users">
-          </i> <span>Manajemen User</span>
-        </a>
-      </li> --}}
       <li class="nav-item dropdown {{ request()->is('user*') ? 'active' : '' }}">
         <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i><span>Manajemen User</span></a>
         <ul class="dropdown-menu">

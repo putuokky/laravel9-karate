@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('', 'login');
+Route::redirect('', 'dashboard-general');
 
 // Dashboard
 Route::controller(DashboardController::class)->group(function () {
