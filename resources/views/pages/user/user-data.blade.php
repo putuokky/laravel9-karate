@@ -30,10 +30,11 @@
                 <h4>{{ $title }}</h4>
               </div> --}}
               <div class="card-body">
-                <div class="mb-3">
-                  <a href="#" class="btn btn-outline-primary"><i class="fa-plus fa-2x"></i> Primary</a>
+                <div class="mb-3 border-bottom pb-3">
+                  <a href="{{ url('user/create') }}" class="btn btn-primary"><i class="fa-solid fa-plus fa-beat-fade"></i>
+                    Primary</a>
                 </div>
-                <hr>
+                {{-- <hr> --}}
                 <div class="table-responsive">
                   <table class="table-hover table" id="table-1">
                     <thead>
