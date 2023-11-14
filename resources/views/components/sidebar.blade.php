@@ -4,7 +4,7 @@
       <a href="{{ url('#') }}">{{ config('app.name') }}</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
-      <a href="{{ url('#') }}">St</a>
+      <a href="{{ url('#') }}">LR</a>
     </div>
     <ul class="sidebar-menu">
       <li class="menu-header">Dashboard</li>
@@ -31,20 +31,6 @@
           </li>
         </ul>
       </li>
-      {{-- <li class="nav-item dropdown {{ $type_menu === 'forms' ? 'active' : '' }}">
-        <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
-        <ul class="dropdown-menu">
-          <li class="{{ Request::is('forms-advanced-form') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ url('forms-advanced-form') }}">Advanced Form</a>
-          </li>
-          <li class="{{ Request::is('forms-editor') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ url('forms-editor') }}">Editor</a>
-          </li>
-          <li class="{{ Request::is('forms-validation') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ url('forms-validation') }}">Validation</a>
-          </li>
-        </ul>
-      </li> --}}
     </ul>
   </aside>
 </div>

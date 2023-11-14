@@ -31,8 +31,9 @@
               </div> --}}
               <div class="card-body">
                 <div class="mb-3 border-bottom pb-3">
-                  <a href="{{ url('user/create') }}" class="btn btn-primary"><i class="fa-solid fa-plus fa-beat-fade"></i>
-                    Primary</a>
+                  <a href="{{ url('user/create') }}" class="btn btn-outline-primary"><i
+                      class="fa-solid fa-plus fa-beat-fade"></i>
+                    Tambah</a>
                 </div>
                 {{-- <hr> --}}
                 <div class="table-responsive">
@@ -42,12 +43,12 @@
                         <th class="text-center">
                           #
                         </th>
+                        <th>Action</th>
                         <th>Task Name</th>
                         <th>Progress</th>
                         <th>Members</th>
                         <th>Due Date</th>
                         <th>Status</th>
-                        <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -55,6 +56,12 @@
                         <td>
                           1
                         </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" class="btn btn-outline-warning"><i --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
+                        </td>
                         <td>Create a mobile app</td>
                         <td class="align-middle">
                           <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
@@ -69,12 +76,17 @@
                         <td>
                           <div class="badge badge-success">Completed</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                       <tr>
                         <td>
                           1
                         </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" class="btn btn-outline-warning"><i --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
+                        </td>
                         <td>Create a mobile app</td>
                         <td class="align-middle">
                           <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
@@ -89,12 +101,17 @@
                         <td>
                           <div class="badge badge-success">Completed</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                       <tr>
                         <td>
                           1
                         </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" class="btn btn-outline-warning"><i --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
+                        </td>
                         <td>Create a mobile app</td>
                         <td class="align-middle">
                           <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
@@ -109,12 +126,17 @@
                         <td>
                           <div class="badge badge-success">Completed</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                       <tr>
                         <td>
                           1
                         </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" class="btn btn-outline-warning"><i --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
+                        </td>
                         <td>Create a mobile app</td>
                         <td class="align-middle">
                           <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
@@ -129,12 +151,17 @@
                         <td>
                           <div class="badge badge-success">Completed</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                       <tr>
                         <td>
                           1
                         </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
+                        </td>
                         <td>Create a mobile app</td>
                         <td class="align-middle">
                           <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
@@ -149,12 +176,17 @@
                         <td>
                           <div class="badge badge-success">Completed</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                       <tr>
                         <td>
                           1
                         </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
+                        </td>
                         <td>Create a mobile app</td>
                         <td class="align-middle">
                           <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
@@ -169,12 +201,17 @@
                         <td>
                           <div class="badge badge-success">Completed</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                       <tr>
                         <td>
                           1
                         </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
+                        </td>
                         <td>Create a mobile app</td>
                         <td class="align-middle">
                           <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
@@ -189,12 +226,17 @@
                         <td>
                           <div class="badge badge-success">Completed</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                       <tr>
                         <td>
                           1
                         </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
+                        </td>
                         <td>Create a mobile app</td>
                         <td class="align-middle">
                           <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
@@ -209,12 +251,17 @@
                         <td>
                           <div class="badge badge-success">Completed</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                       <tr>
                         <td>
                           1
                         </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
+                        </td>
                         <td>Create a mobile app</td>
                         <td class="align-middle">
                           <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
@@ -229,11 +276,16 @@
                         <td>
                           <div class="badge badge-success">Completed</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                       <tr>
                         <td>
                           2
+                        </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
                         </td>
                         <td>Redesign homepage</td>
                         <td class="align-middle">
@@ -253,11 +305,16 @@
                         <td>
                           <div class="badge badge-info">Todo</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                       <tr>
                         <td>
                           3
+                        </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
                         </td>
                         <td>Backup database</td>
                         <td class="align-middle">
@@ -275,11 +332,16 @@
                         <td>
                           <div class="badge badge-warning">In Progress</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                       <tr>
                         <td>
                           4
+                        </td>
+                        {{-- <td><a href="{{ url('user/' . $id . '/edit') }}" title="Ubah" --}}
+                        <td><a href="#" title="Ubah" class="btn btn-outline-warning"><i
+                              class="fa-solid fa-pencil"></i></a>
+                          <a href="#" title="Hapus" class="btn btn-outline-danger"><i
+                              class="fa-solid fa-trash"></i></a>
                         </td>
                         <td>Input data</td>
                         <td class="align-middle">
@@ -301,7 +363,6 @@
                         <td>
                           <div class="badge badge-success">Completed</div>
                         </td>
-                        <td><a href="#" class="btn btn-secondary">Detail</a></td>
                       </tr>
                     </tbody>
                   </table>

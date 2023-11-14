@@ -63,7 +63,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('pages.user.user-edit', [
+            'title' => 'User Management'
+            // 'users' => User::all()
+        ]);
     }
 
     /**

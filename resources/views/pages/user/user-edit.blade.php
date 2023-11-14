@@ -23,10 +23,10 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h4>Tambah {{ $title }}</h4>
+                <h4>Ubah {{ $title }}</h4>
               </div>
               <div class="card-body">
-                <form method="POST" action="">
+                <form method="POST" action="#">
                   <div class="form-group">
                     <label>Your Name</label>
                     <input type="text" class="form-control" required="">
