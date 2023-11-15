@@ -22,11 +22,11 @@
         <div class="row">
           <div class="col-12">
             <div class="card">
-              <div class="card-header">
+              <div class="card-header border-bottom">
                 <h4>Tambah {{ $title }}</h4>
               </div>
               <div class="card-body">
-                <form method="POST" action="">
+                <form method="POST" action="#">
                   <div class="form-group">
                     <label>Your Name</label>
                     <input type="text" class="form-control" required="">
@@ -44,7 +44,8 @@
                     <textarea class="form-control" data-height="150" required=""></textarea>
                   </div>
                   <div class="card-footer text-right">
-                    <button class="btn btn-primary">Submit</button>
+                    <a href="{{ url('user') }}" class="btn btn-dark">Back</a>
+                    <button class="btn btn-primary">Add</button>
                   </div>
                 </form>
               </div>

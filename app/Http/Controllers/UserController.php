@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         return view('pages.user.user-data', [
             'title' => 'User Management',
-            // 'users' => User::all()
+            'users' => User::all()
         ]);
     }
 
