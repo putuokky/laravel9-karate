@@ -31,6 +31,9 @@
           </li>
         </ul>
       </li>
+      <li class="{{ Request::is('role*') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ url('role') }}"><i class="fa-solid fa-user-gear"></i> <span>Role User</span></a>
+      </li>
     </ul>
   </aside>
 </div>

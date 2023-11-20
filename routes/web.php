@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,6 @@ Route::controller(LoginController::class)->group(function () {
 
 // User
 Route::resource('user', UserController::class);
+
+// Role
+Route::resource('role', RoleController::class);
