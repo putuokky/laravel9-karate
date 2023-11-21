@@ -23,28 +23,23 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header border-bottom">
-                <h4>Ubah {{ $title }}</h4>
+                <h4>Edit {{ $title }}</h4>
               </div>
               <div class="card-body">
-                <form method="POST" action="#">
+                <form method="POST" action="{{ url('role/' . $roles->id) }}">
+                  @method('put')
+                  @csrf
                   <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" class="form-control" required="">
-                  </div>
-                  <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" class="form-control" required="">
-                  </div>
-                  <div class="form-group">
-                    <label>Subject</label>
-                    <input type="email" class="form-control">
-                  </div>
-                  <div class="form-group mb-0">
-                    <label>Message</label>
-                    <textarea class="form-control" data-height="150" required=""></textarea>
+                    <label>Nama Role</label>
+                    <input type="text" name="nama_role" id="nama_role" placeholder="Nama Role"
+                      value="{{ old('nama_role', $roles->nama_role) }}"
+                      class="form-control @error('nama_role') is-invalid @enderror">
+                    @error('nama_role')
+                      <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                   </div>
                   <div class="card-footer text-right">
-                    <a href="{{ url('user') }}" class="btn btn-dark">Back</a>
+                    <a href="{{ url('role') }}" class="btn btn-dark">Back</a>
                     <button class="btn btn-primary">Edit</button>
                   </div>
                 </form>

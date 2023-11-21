@@ -4,6 +4,8 @@
 
 @push('style')
   <!-- CSS Libraries -->
+  <link rel="stylesheet" href="{{ asset('library/izitoast/dist/css/iziToast.min.css') }}">
+
   <!-- DataTables -->
   <link rel="stylesheet" href="{{ asset('library/datatables/media/css/dataTables.min.css') }}">
   <link rel="stylesheet" href="{{ asset('library/datatables/media/css/dataTables.bootstrap4.min.css') }}">
@@ -34,14 +36,13 @@
                   <a href="{{ url('role/create') }}" class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i>
                     Tambah</a>
                 </div>
-                {{-- <hr> --}}
                 <div class="table-responsive">
-                  <table class="table-hover table" id="table-1">
+                  <table class="table-hover table" id="datatable">
                     <thead>
                       <tr>
-                        <th class="text-center">
+                        {{-- <th class="text-center">
                           #
-                        </th>
+                        </th> --}}
                         <th>Action</th>
                         <th>Nama Role</th>
                       </tr>
@@ -49,10 +50,10 @@
                     <tbody>
                       @foreach ($roles as $role)
                         <tr>
-                          <td>{{ $loop->iteration }}</td>
-                          <td><a href="{{ url('role/' . $role->id . '/edit') }}" title="Ubah"
+                          {{-- <td>{{ $loop->iteration }}</td> --}}
+                          <td><a href="{{ url('role/' . $role->id . '/edit') }}" title="Edit"
                               class="btn btn-outline-warning"><i class="fa-solid fa-pencil"></i></a>
-                            <a href="{{ $role->id }}" title="Hapus" class="btn btn-outline-danger"><i
+                            <a href="{{ $role->id }}" title="Delete" class="btn btn-outline-danger"><i
                                 class="fa-solid fa-trash"></i></a>
                           </td>
                           <td>{{ $role->nama_role }}</td>
@@ -73,6 +74,7 @@
 @push('scripts')
   <!-- JS Libraies -->
   <script src="{{ asset('library/jquery-ui-dist/jquery-ui.min.js') }}"></script>
+  <script src="{{ asset('library/izitoast/dist/js/iziToast.min.js') }}"></script>
 
   <!-- DataTables -->
   <script src="{{ asset('library/datatables/media/js/dataTables.bootstrap4.min.js') }}"></script>
@@ -80,5 +82,17 @@
   <script src="{{ asset('library/datatables/media/js/dataTables.select.min.js') }}"></script>
 
   <!-- Page Specific JS File -->
-  <script src="{{ asset('js/page/modules-datatables.js') }}"></script>
+  <script>
+    $("#datatable").dataTable();
+  </script>
+  <script>
+    var title = "{{ $title }}";
+    @if (session()->has('status'))
+      iziToast.success({
+        title: 'Success!',
+        message: title + ' {{ session('status') }}',
+        position: 'topRight'
+      });
+    @endif
+  </script>
 @endpush

@@ -40,7 +40,13 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_role' => ['required', 'max:255'],
+        ]);
+
+        Role::create($validatedData);
+
+        return redirect('role')->with('status', 'added successfully');
     }
 
     /**
@@ -62,7 +68,10 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        //
+        return view('pages.role.role-edit', [
+            'title' => 'Role User',
+            'roles' => $role,
+        ]);
     }
 
     /**
@@ -74,7 +83,13 @@ class RoleController extends Controller
      */
     public function update(Request $request, Role $role)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_role' => ['required', 'max:255'],
+        ]);
+
+        Role::where('id', $role->id)->update($validatedData);
+
+        return redirect('role')->with('status', 'changed successfully');
     }
 
     /**

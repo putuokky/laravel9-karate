@@ -26,10 +26,15 @@
                 <h4>Tambah {{ $title }}</h4>
               </div>
               <div class="card-body">
-                <form method="POST" action="#">
+                <form method="POST" action="{{ url('role') }}">
+                  @csrf
                   <div class="form-group">
                     <label>Nama Role</label>
-                    <input type="text" class="form-control" required="">
+                    <input type="text" name="nama_role" id="nama_role" placeholder="Nama Role"
+                      value="{{ old('nama_role') }}" class="form-control @error('nama_role') is-invalid @enderror">
+                    @error('nama_role')
+                      <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                   </div>
                   <div class="card-footer text-right">
                     <a href="{{ url('role') }}" class="btn btn-dark">Back</a>

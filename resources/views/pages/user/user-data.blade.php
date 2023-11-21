@@ -34,9 +34,8 @@
                   <a href="{{ url('user/create') }}" class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i>
                     Tambah</a>
                 </div>
-                {{-- <hr> --}}
                 <div class="table-responsive">
-                  <table class="table-hover table" id="table-1">
+                  <table class="table-hover table" id="datatable">
                     <thead>
                       <tr>
                         <th class="text-center">
@@ -52,9 +51,9 @@
                       @foreach ($users as $user)
                         <tr>
                           <td>{{ $loop->iteration }}</td>
-                          <td><a href="{{ url('user/' . $user->id . '/edit') }}" title="Ubah"
+                          <td><a href="{{ url('user/' . $user->id . '/edit') }}" title="Edit"
                               class="btn btn-outline-warning"><i class="fa-solid fa-pencil"></i></a>
-                            <a href="{{ $user->id }}" title="Hapus" class="btn btn-outline-danger"><i
+                            <a href="{{ $user->id }}" title="Delete" class="btn btn-outline-danger"><i
                                 class="fa-solid fa-trash"></i></a>
                           </td>
                           <td>{{ $user->name }}</td>
@@ -84,5 +83,7 @@
   <script src="{{ asset('library/datatables/media/js/dataTables.select.min.js') }}"></script>
 
   <!-- Page Specific JS File -->
-  <script src="{{ asset('js/page/modules-datatables.js') }}"></script>
+  <script>
+    $("#datatable").dataTable();
+  </script>
 @endpush
