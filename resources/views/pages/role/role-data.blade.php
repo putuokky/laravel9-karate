@@ -34,7 +34,7 @@
               <div class="card-body">
                 <div class="mb-3 border-bottom pb-3">
                   <a href="{{ url('role/create') }}" class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i>
-                    Tambah</a>
+                    Add</a>
                 </div>
                 <div class="table-responsive">
                   <table class="table-hover table" id="datatable">
@@ -53,8 +53,12 @@
                           {{-- <td>{{ $loop->iteration }}</td> --}}
                           <td><a href="{{ url('role/' . $role->id . '/edit') }}" title="Edit"
                               class="btn btn-outline-warning"><i class="fa-solid fa-pencil"></i></a>
-                            <a href="{{ $role->id }}" title="Delete" class="btn btn-outline-danger"><i
-                                class="fa-solid fa-trash"></i></a>
+                            <form method="POST" action="{{ url('role/' . $role->id) }}" class="d-inline">
+                              @method('delete')
+                              @csrf
+                              <button title="Delete" class="btn btn-outline-danger" id="confirm_delete"><i
+                                  class="fa-solid fa-trash"></i></button>
+                            </form>
                           </td>
                           <td>{{ $role->nama_role }}</td>
                         </tr>
@@ -75,6 +79,7 @@
   <!-- JS Libraies -->
   <script src="{{ asset('library/jquery-ui-dist/jquery-ui.min.js') }}"></script>
   <script src="{{ asset('library/izitoast/dist/js/iziToast.min.js') }}"></script>
+  <script src="{{ asset('library/sweetalert/dist/sweetalert.min.js') }}"></script>
 
   <!-- DataTables -->
   <script src="{{ asset('library/datatables/media/js/dataTables.bootstrap4.min.js') }}"></script>
@@ -83,7 +88,9 @@
 
   <!-- Page Specific JS File -->
   <script>
-    $("#datatable").dataTable();
+    $("#datatable").dataTable({
+      "searching": false,
+    });
   </script>
   <script>
     var title = "{{ $title }}";
@@ -94,5 +101,24 @@
         position: 'topRight'
       });
     @endif
+  </script>
+  <script>
+    $('#confirm_delete').click(function(event) {
+      var form = $(this).closest("form");
+      var name = $(this).data("name");
+      event.preventDefault();
+      swal({
+          title: 'Are you sure?',
+          text: 'If you delete this data, it will be lost forever!',
+          icon: 'warning',
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+            form.submit();
+          }
+        });
+    });
   </script>
 @endpush

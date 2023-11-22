@@ -57,7 +57,7 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
-        //
+        echo "controler role show " . $role->nama_role . " (" . $role->id . ")";
     }
 
     /**
@@ -100,6 +100,8 @@ class RoleController extends Controller
      */
     public function destroy(Role $role)
     {
-        //
+        Role::find($role->id)->delete();
+
+        return redirect('role')->with('status', 'deleted successfully');
     }
 }
